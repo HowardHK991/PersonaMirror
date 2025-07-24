@@ -18,9 +18,11 @@ PersonaMirror 是一款 Chrome 插件，致力于为 KIMI、DeepSeek、ChatGPT �
 - 本地敏感信息加密，保障隐私
 
 ## 安装方法
-1. 从 Chrome 商店搜索并安装“PersonaMirror”
-2. 首次点击插件图标，授权读取 KIMI/DeepSeek 域名
-3. 按照引导完成初始化设置
+1. 请前往本项目GitHub仓库下载源码（https://github.com/HowardHK991/PersonaMirror.git）
+2. 打开Chrome浏览器，进入“扩展程序”页面，开启“开发者模式”
+3. 点击“加载已解压的扩展程序”，选择chrome_extension文件夹
+4. 首次点击插件图标，授权读取 KIMI/DeepSeek 域名
+5. 按照引导完成初始化设置
 
 ## 使用方法
 - 正常与 KIMI/DeepSeek 聊天，插件自动捕获对话
