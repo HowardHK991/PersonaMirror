@@ -1,7 +1,7 @@
 # PersonaMirror 小白用户使用说明书
 
 ## 1. 插件安装
-- 前往本项目GitHub仓库（https://github.com/HowardHK991/PersonaMirror.git）下载源码
+- 前往本项目GitHub仓库（https://github.com/HowardHK991/PersonaMirror.git) 下载源码
 - 解压后，打开 Chrome 浏览器，进入“扩展程序”页面，开启“开发者模式”
 - 点击“加载已解压的扩展程序”，选择 chrome_extension 文件夹
 - 固定插件图标
