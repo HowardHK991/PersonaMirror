@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>PersonaMirror 侧边栏</title>
+  <style>
+    body { font-family: sans-serif; margin: 0; padding: 10px; }
+    #status { margin-bottom: 10px; }
+    #main { margin-bottom: 10px; }
+    #snapshot { white-space: pre-wrap; background: #f7f7f7; padding: 8px; border-radius: 4px; font-size: 14px; }
+    button { margin-right: 8px; }
+  </style>
+</head>
+<body>
+  <h2>PersonaMirror</h2>
+  <div id="status">插件已加载</div>
+  <div id="main"></div>
+  <button id="genSnapshotBtn">生成快照</button>
+  <button id="injectBtn">注入快照</button>
+  <div id="snapshot"></div>
+  <script src="sidepanel.js"></script>
+</body>
+</html> 
