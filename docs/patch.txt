@@ -1,0 +1,19 @@
+# PersonaMirror 近期补丁与变更说明
+
+## 2025-07-25
+
+### 修复与优化
+1. **快照找不到/保存失败问题**
+   - `db.js` 新增快照保存和读取的错误提示，快照内容为空时不再保存，读取不到快照时会弹窗提醒。
+   - 相关函数：`saveSnapshot`、`getLatestSnapshot`
+2. **页面频繁刷新问题**
+   - `content_script.js` 优化了对话区检测逻辑，最多重试5次，避免无限刷新，超限后弹窗提示用户。
+3. **侧边栏不显示问题**
+   - `sidepanel.js` 所有 DOM 操作均在 `DOMContentLoaded` 事件后执行，避免脚本过早运行导致侧边栏不显示或报错。
+
+### 主要涉及文件
+- `chrome_extension/db.js`
+- `chrome_extension/content_script.js`
+- `chrome_extension/sidepanel.js`
+
+如需详细代码变更，请查阅对应文件的注释与实现。
