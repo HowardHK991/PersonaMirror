@@ -25,7 +25,7 @@ function openDB() {
   });
 }
 
-export async function addRawQA(qa) {
+async function addRawQA(qa) {
   const db = await openDB();
   return new Promise((resolve, reject) => {
     const tx = db.transaction(RAWQA_STORE, 'readwrite');
@@ -34,7 +34,7 @@ export async function addRawQA(qa) {
   });
 }
 
-export async function getRawQACount() {
+async function getRawQACount() {
   const db = await openDB();
   return new Promise((resolve, reject) => {
     const tx = db.transaction(RAWQA_STORE, 'readonly');
@@ -44,7 +44,7 @@ export async function getRawQACount() {
   });
 }
 
-export async function getAllRawQA() {
+async function getAllRawQA() {
   const db = await openDB();
   return new Promise((resolve, reject) => {
     const tx = db.transaction(RAWQA_STORE, 'readonly');
@@ -54,7 +54,7 @@ export async function getAllRawQA() {
   });
 }
 
-export async function saveSnapshot(snapshot) {
+async function saveSnapshot(snapshot) {
   const db = await openDB();
   return new Promise((resolve, reject) => {
     const tx = db.transaction(SNAPSHOT_STORE, 'readwrite');
@@ -63,7 +63,7 @@ export async function saveSnapshot(snapshot) {
   });
 }
 
-export async function getLatestSnapshot() {
+async function getLatestSnapshot() {
   const db = await openDB();
   return new Promise((resolve, reject) => {
     const tx = db.transaction(SNAPSHOT_STORE, 'readonly');
@@ -77,4 +77,11 @@ export async function getLatestSnapshot() {
     };
     req.onerror = reject;
   });
-} 
+}
+
+// 挂载到window，兼容content_script和sidepanel直接调用
+window.addRawQA = addRawQA;
+window.getRawQACount = getRawQACount;
+window.getAllRawQA = getAllRawQA;
+window.saveSnapshot = saveSnapshot;
+window.getLatestSnapshot = getLatestSnapshot; 
